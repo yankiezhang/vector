@@ -6,3 +6,8 @@
 //
 
 #include "vector.hpp"
+
+void test() {
+    vector<int, 5> v;
+    std::cout << v << std::endl;
+}

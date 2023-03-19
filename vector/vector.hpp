@@ -11,6 +11,8 @@
 #import "basic_vector.hpp"
 #import <iostream>
 
+void test();
+
 template <typename T, int S>
 class vector : public basic_vector<T, S> {
     
@@ -20,6 +22,8 @@ public:
     friend std::ostream& operator<<(std::ostream& out, const vector<T, S>& v) {
         return out << v[0];
     }
+    
+    friend void test();
 };
 
 #endif /* vector_hpp */
