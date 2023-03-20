@@ -17,8 +17,8 @@ public:
     
 #pragma mark - Operation declaration
     const T& operator[](int i) const {return _arr[i];}
-    const basic_vector<T, S>& operator+=(const basic_vector<T, S>& v);
-    const basic_vector<T, S>& operator-=(const basic_vector<T, S>& v);
+    const basic_vector<T, S>& operator+=(const basic_vector<T, S> &v);
+    const basic_vector<T, S>& operator-=(const basic_vector<T, S> &v);
     const basic_vector<T, S>& operator*=(const T &a);
     
 private:
@@ -26,7 +26,7 @@ private:
 };
 
 template <typename T, int S>
-basic_vector<T, S>::basic_vector(const T& a) {
+basic_vector<T, S>::basic_vector(const T &a) {
     for (int i=0; i<S; i++) {
         _arr[i] = a;
     }
@@ -41,7 +41,7 @@ basic_vector<T, S>::basic_vector(const T (&a)[S]) {
 
 #pragma mark - Operation definition
 template <typename T, int S>
-const basic_vector<T, S>& basic_vector<T, S>::operator+=(const basic_vector<T, S>& v) {
+const basic_vector<T, S>& basic_vector<T, S>::operator+=(const basic_vector<T, S> &v) {
     for (int i=0; i<S; i++) {
         _arr[i] += v[i];
     }
@@ -49,7 +49,7 @@ const basic_vector<T, S>& basic_vector<T, S>::operator+=(const basic_vector<T, S
 }
 
 template <typename T, int S>
-const basic_vector<T, S>& basic_vector<T, S>::operator-=(const basic_vector<T, S>& v) {
+const basic_vector<T, S>& basic_vector<T, S>::operator-=(const basic_vector<T, S> &v) {
     for (int i=0; i<S; i++) {
         _arr[i] -= v[i];
     }

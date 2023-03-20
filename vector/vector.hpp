@@ -19,7 +19,7 @@ class vector : public basic_vector<T, S> {
 public:
     using basic_vector<T, S>::basic_vector;
         
-    friend std::ostream& operator<<(std::ostream& out, const vector<T, S>& v) {
+    friend std::ostream& operator<<(std::ostream &out, const vector<T, S> &v) {
         return out << v[0];
     }
     

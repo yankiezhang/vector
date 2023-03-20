@@ -10,5 +10,8 @@
 void test_matrix()
 {
     matrix<int, 5, 5> m;
+    matrix<int, 5, 5> m1 = {1};
+    
     std::cout << m << std::endl;
+    std::cout << m+m1 << std::endl;
 }
