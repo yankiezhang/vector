@@ -64,4 +64,18 @@ const basic_vector<T, S>& basic_vector<T, S>::operator*=(const T &a) {
     return *this;
 }
 
+#pragma mark - Class Pointer Prototype
+
+template <typename T, int S>
+class basic_vector<T*, S> {
+    
+public:
+    basic_vector(const T (*a)[S]):_arr(a){}
+    
+    const T& operator[](int i) { return (*_arr)[i]; }
+    
+private:
+    T (*_arr)[S];
+};
+
 #endif /* basic_vector_hpp */

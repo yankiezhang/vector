@@ -7,7 +7,7 @@
 
 #include "vector.hpp"
 
-void test() {
+void test_vector() {
     vector<int, 5> v;
     vector<int, 5> v1 = {1};
     

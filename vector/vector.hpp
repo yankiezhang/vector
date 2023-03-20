@@ -11,7 +11,7 @@
 #import "basic_vector.hpp"
 #import <iostream>
 
-void test();
+void test_vector();
 
 template <typename T, int S>
 class vector : public basic_vector<T, S> {
@@ -23,7 +23,7 @@ public:
         return out << v[0];
     }
     
-    friend void test();
+    friend void test_vector();
 };
 
 #endif /* vector_hpp */

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0F0E8D29C891EA006368CC /* basic_matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE0F0E8B29C891EA006368CC /* basic_matrix.cpp */; };
+		DE0F0E9029C89842006368CC /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE0F0E8E29C89842006368CC /* matrix.cpp */; };
 		DE431FDA29C21DB200458DAD /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE431FD829C21DB200458DAD /* vector.cpp */; };
 		DE94890429BB80790097914B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE94890329BB80790097914B /* main.cpp */; };
 		DE9B739229C0BB4D0070C297 /* basic_vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE9B739029C0BB4D0070C297 /* basic_vector.cpp */; };
@@ -25,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE0F0E8B29C891EA006368CC /* basic_matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = basic_matrix.cpp; sourceTree = "<group>"; };
+		DE0F0E8C29C891EA006368CC /* basic_matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = basic_matrix.hpp; sourceTree = "<group>"; };
+		DE0F0E8E29C89842006368CC /* matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cpp; sourceTree = "<group>"; };
+		DE0F0E8F29C89842006368CC /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
 		DE431FD829C21DB200458DAD /* vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
 		DE431FD929C21DB200458DAD /* vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
 		DE94890029BB80790097914B /* vector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vector; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,8 @@
 				DE94890329BB80790097914B /* main.cpp */,
 				DE431FD829C21DB200458DAD /* vector.cpp */,
 				DE431FD929C21DB200458DAD /* vector.hpp */,
+				DE0F0E8E29C89842006368CC /* matrix.cpp */,
+				DE0F0E8F29C89842006368CC /* matrix.hpp */,
 			);
 			path = vector;
 			sourceTree = "<group>";
@@ -76,6 +84,8 @@
 			children = (
 				DE9B739029C0BB4D0070C297 /* basic_vector.cpp */,
 				DE9B739129C0BB4D0070C297 /* basic_vector.hpp */,
+				DE0F0E8B29C891EA006368CC /* basic_matrix.cpp */,
+				DE0F0E8C29C891EA006368CC /* basic_matrix.hpp */,
 			);
 			path = basic;
 			sourceTree = "<group>";
@@ -137,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0F0E9029C89842006368CC /* matrix.cpp in Sources */,
 				DE94890429BB80790097914B /* main.cpp in Sources */,
 				DE9B739229C0BB4D0070C297 /* basic_vector.cpp in Sources */,
 				DE431FDA29C21DB200458DAD /* vector.cpp in Sources */,
+				DE0F0E8D29C891EA006368CC /* basic_matrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
