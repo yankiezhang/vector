@@ -11,8 +11,8 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    test_vector();
-    test_matrix();
+    vector<int, 5>::test();
+    matrix<int, 5, 5>::test();
     std::cout << "Hello, World!\n";
     return 0;
 }

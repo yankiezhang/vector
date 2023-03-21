@@ -14,23 +14,39 @@
 void test_matrix();
 
 template <typename T, int R, int C> class matrix;
+
+#pragma mark - Friend Function Declaration
 template <typename T, int R, int C>
 const matrix<T, R, C> operator+(const matrix<T, R, C>&, const matrix<T, R, C>&);
 
 template <typename T, int R, int C>
+std::ostream& operator<<(std::ostream&, const matrix<T, R, C>&);
+
+template <typename T, int R, int C>
 class matrix : public basic_matrix<T, R, C> {
+    
+    friend std::ostream& operator<< <>(std::ostream& out, const matrix<T, R, C>& m);
+    friend const matrix<T, R, C> operator+ <>(const matrix<T, R, C> &v1, const matrix<T, R, C> &v2);
+    
+public:
+    static void test();
     
 public:
     using basic_matrix<T, R, C>::basic_matrix;
-    
-    friend void test_matrix();
-    
-    friend std::ostream& operator<<(std::ostream& out, const matrix<T, R, C>& m) {
-        return out << m[0][0];
-    }
-    
-    friend const matrix<T, R, C> operator+ <>(const matrix<T, R, C> &v1, const matrix<T, R, C> &v2);
+        
 };
+
+template <typename T, int R, int C>
+void matrix<T, R, C>::test() {
+    matrix<T, R, C> m;
+    std::cout << m << std::endl;;
+}
+
+#pragma mark - Friend Function Definition
+template <typename T, int R, int C>
+std::ostream& operator<<(std::ostream& out, const matrix<T, R, C> &m) {
+    return out << m[0][0];
+}
 
 template <typename T, int R, int C>
 const matrix<T, R, C> operator+(const matrix<T, R, C> &v1, const matrix<T, R, C> &v2) {
